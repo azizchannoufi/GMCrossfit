@@ -1,0 +1,41 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isAdmin() {
+      return request.auth != null && request.auth.token.admin == true;
+    }
+
+    function isImage() {
+      return request.resource.contentType.matches('image/.*');
+    }
+
+    function under2MB() {
+      return request.resource.size < 2 * 1024 * 1024;
+    }
+
+    // Product, category, and pack images — public read, admin write
+    match /products/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin() && isImage() && under2MB();
+    }
+
+    match /categories/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin() && isImage() && under2MB();
+    }
+
+    match /packs/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin() && isImage() && under2MB();
+    }
+
+    match /banner/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin() && isImage() && under2MB();
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

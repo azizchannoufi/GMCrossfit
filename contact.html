@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | GMCrossfit</title>
+  <meta name="description" content="Contactez GMCrossfit par WhatsApp ou formulaire.">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('gmc_theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div data-site-banner hidden></div>
+  <app-header></app-header>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Support</p>
+      <h1>Contact</h1>
+    </div>
+  </header>
+
+  <main class="container content-grid" style="padding-bottom: 3rem;">
+    <div class="prose">
+      <p>Une question sur une taille, une commande ou un collab ? Écrivez-nous — on répond vite.</p>
+      <a class="btn btn--accent" data-contact-whatsapp href="https://wa.me/" target="_blank" rel="noopener noreferrer">Ouvrir WhatsApp</a>
+    </div>
+    <aside class="contact-card">
+      <h2 style="font-size:1.25rem;">Infos</h2>
+      <p class="muted">Horaires : Lun–Sam, 10h–20h</p>
+      <p class="muted">Livraison partout au Maroc</p>
+      <p class="muted">Paiement à la livraison</p>
+      <p style="margin-top:1rem;"><a href="size-guide.html">Guide des tailles →</a></p>
+    </aside>
+  </main>
+
+  <app-footer></app-footer>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produit | GMCrossfit</title>
+  <meta name="description" content="Détail produit GMCrossfit — choisissez taille et couleur.">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('gmc_theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div data-site-banner hidden></div>
+  <app-header></app-header>
+
+  <main class="container" style="padding: 2rem 0 3rem;" data-product-detail>
+    <p class="empty-state">Chargement du produit…</p>
+  </main>
+
+  <app-footer></app-footer>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="banner.js"></script>
+</body>
+</html>

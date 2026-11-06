@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GMCrossfit — Sportswear CrossFit Premium</title>
+  <meta name="description" content="GMCrossfit — sportswear CrossFit premium. T-shirts, tanks, shorts, leggings, hoodies. Livraison rapide, paiement à la livraison.">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('gmc_theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div data-site-banner hidden></div>
+  <app-header></app-header>
+
+  <div class="flash-teaser" data-flash-teaser hidden>
+    <span data-flash-teaser-title>Vente Flash</span>
+    <span class="flash-countdown" data-flash-teaser-countdown>—</span>
+    <a href="venteflash.html">Voir les offres</a>
+  </div>
+
+  <section class="hero" aria-label="Hero">
+    <div class="hero__content">
+      <p class="hero__brand">GMCrossfit</p>
+      <h1 class="hero__title">Born for the WOD</h1>
+      <p class="hero__text">Sportswear agressif, premium, taillé pour la box. Performance sans compromis.</p>
+      <div class="hero__cta">
+        <a class="btn btn--accent" href="produits.html">Shop Now</a>
+        <a class="btn btn--ghost" href="packs.html">Voir les packs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Catégories</h2>
+        <a class="section__link" href="produits.html">Tout voir</a>
+      </div>
+      <div class="category-grid" data-categories-grid></div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--bg-elevated); border-block: 1px solid var(--border);">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Collection vedette</h2>
+        <a class="section__link" href="produits.html">Boutique</a>
+      </div>
+      <div class="product-grid" data-featured-grid></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Pourquoi GM</h2>
+      </div>
+      <div class="trust-grid">
+        <article class="trust-item">
+          <div class="trust-item__icon">01</div>
+          <h3>Livraison rapide</h3>
+          <p>Expédition soignée sous 24–48h ouvrés.</p>
+        </article>
+        <article class="trust-item">
+          <div class="trust-item__icon">02</div>
+          <h3>Paiement à la livraison</h3>
+          <p>Cash on delivery — payez à réception.</p>
+        </article>
+        <article class="trust-item">
+          <div class="trust-item__icon">03</div>
+          <h3>Qualité premium</h3>
+          <p>Tissus techniques, coupes athlétiques.</p>
+        </article>
+        <article class="trust-item">
+          <div class="trust-item__icon">04</div>
+          <h3>Échange facile</h3>
+          <p>Taille incorrecte ? On s’occupe de vous.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Ils en parlent</h2>
+      </div>
+      <div class="testimonials">
+        <blockquote class="testimonial">
+          <p>« La coupe tient vraiment pendant les WODs. Zero distraction, max style. »</p>
+          <cite>— Amine, CrossFit Casablanca</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>« Tissu respirant, look street. Je ne mets plus que GM en box. »</p>
+          <cite>— Sara, coach</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>« Commande WhatsApp ultra simple, livraison nickel. »</p>
+          <cite>— Youssef</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Sur le terrain</h2>
+        <a class="section__link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">@gmcrossfit</a>
+      </div>
+      <div class="ig-grid">
+        <a href="produits.html"><img src="assets/logo.jpg" alt="GMCrossfit look 1" loading="lazy"></a>
+        <a href="produits.html"><img src="assets/logo.jpg" alt="GMCrossfit look 2" loading="lazy"></a>
+        <a href="produits.html"><img src="assets/logo.jpg" alt="GMCrossfit look 3" loading="lazy"></a>
+        <a href="produits.html"><img src="assets/logo.jpg" alt="GMCrossfit look 4" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wa-cta">
+    <div class="container">
+      <h2>Une question ? Écrivez-nous</h2>
+      <p class="muted">Réponse rapide sur WhatsApp.</p>
+      <a class="btn btn--accent" href="contact.html">WhatsApp</a>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

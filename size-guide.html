@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guide des tailles | GMCrossfit</title>
+  <meta name="description" content="Guide des tailles GMCrossfit — trouvez votre coupe idéale.">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('gmc_theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div data-site-banner hidden></div>
+  <app-header></app-header>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Fit</p>
+      <h1>Guide des tailles</h1>
+      <p class="muted">Mesurez-vous et choisissez la taille la plus proche. En cas de doute, prenez la taille supérieure.</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom: 3rem;">
+    <div class="size-guide-table-wrap" style="overflow-x:auto;">
+      <table class="size-guide-table">
+        <thead>
+          <tr>
+            <th>Taille</th>
+            <th>Poitrine (cm)</th>
+            <th>Taille (cm)</th>
+            <th>Hanches (cm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>XS</td><td>84–88</td><td>68–72</td><td>88–92</td></tr>
+          <tr><td>S</td><td>88–94</td><td>72–78</td><td>92–98</td></tr>
+          <tr><td>M</td><td>94–100</td><td>78–84</td><td>98–104</td></tr>
+          <tr><td>L</td><td>100–106</td><td>84–90</td><td>104–110</td></tr>
+          <tr><td>XL</td><td>106–114</td><td>90–98</td><td>110–118</td></tr>
+          <tr><td>XXL</td><td>114–122</td><td>98–106</td><td>118–126</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="prose" style="margin-top:2rem;">
+      <h2>Comment mesurer</h2>
+      <ul class="benefits">
+        <li><strong>Poitrine</strong> — au point le plus fort, ruban horizontal</li>
+        <li><strong>Taille</strong> — au niveau le plus étroit du torse</li>
+        <li><strong>Hanches</strong> — au point le plus fort des hanches</li>
+      </ul>
+      <p>Nos pièces ont une coupe athlétique (fitted). Pour un fit oversized, montez d’une taille.</p>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="banner.js"></script>
+</body>
+</html>

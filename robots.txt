@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /functions/
+Disallow: /scripts/
+
+Sitemap: https://gmcrossfit.web.app/sitemap.xml

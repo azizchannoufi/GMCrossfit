@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panier &amp; Commande | GMCrossfit</title>
+  <meta name="description" content="Votre panier GMCrossfit — finalisez votre commande via WhatsApp.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('gmc_theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div data-site-banner hidden></div>
+  <app-header></app-header>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Checkout</p>
+      <h1>Panier</h1>
+    </div>
+  </header>
+
+  <main class="container cart-layout" style="padding-bottom: 3rem;" data-cart-page>
+    <div>
+      <div data-cart-list></div>
+    </div>
+
+    <aside class="cart-summary" data-cart-summary hidden>
+      <h2 class="section__title" style="font-size:1.4rem;">Récapitulatif</h2>
+      <dl>
+        <div>
+          <dt>Sous-total</dt>
+          <dd data-subtotal>0 MAD</dd>
+        </div>
+        <div>
+          <dt>Livraison</dt>
+          <dd data-delivery>—</dd>
+        </div>
+        <div class="total">
+          <dt>Total</dt>
+          <dd data-total>0 MAD</dd>
+        </div>
+      </dl>
+      <p class="muted" data-free-delivery-hint style="font-size:0.85rem;"></p>
+      <p class="muted" style="font-size:0.8rem;">Les totaux affichés sont indicatifs. Le prix final est calculé et confirmé par le serveur.</p>
+
+      <div data-checkout-success hidden style="margin:1rem 0;padding:1rem;border:1px solid var(--accent);">
+        <p><strong>Commande créée :</strong> <span data-order-id></span></p>
+        <p class="muted">WhatsApp devrait s’ouvrir pour confirmer.</p>
+      </div>
+
+      <form class="checkout-form" data-checkout-form novalidate>
+        <div class="form-field">
+          <label for="name">Nom complet</label>
+          <input id="name" name="name" required minlength="2" maxlength="80" autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="phone">Téléphone</label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="0612345678">
+        </div>
+        <div class="form-field">
+          <label for="city">Ville</label>
+          <input id="city" name="city" required minlength="2" maxlength="60" autocomplete="address-level2">
+        </div>
+        <div class="form-field">
+          <label for="address">Adresse</label>
+          <textarea id="address" name="address" rows="3" required minlength="5" maxlength="200" autocomplete="street-address"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="promoCode">Code promo</label>
+          <input id="promoCode" name="promoCode" maxlength="30" autocomplete="off">
+        </div>
+        <!-- Honeypot -->
+        <div class="honeypot" aria-hidden="true">
+          <label for="website">Site web</label>
+          <input id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="form-errors" data-checkout-errors role="alert"></p>
+        <p class="form-status" data-checkout-status></p>
+        <button type="submit" class="btn btn--accent btn--block">Commander via WhatsApp</button>
+      </form>
+    </aside>
+  </main>
+
+  <app-footer></app-footer>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="banner.js"></script>
+</body>
+</html>

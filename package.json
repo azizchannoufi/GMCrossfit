@@ -1,0 +1,23 @@
+{
+  "name": "gmcrossfit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GMCrossfit e-commerce — vanilla storefront + Firebase",
+  "scripts": {
+    "emulators": "firebase emulators:start",
+    "serve:ui": "npx --yes live-server --port=5500 --no-browser",
+    "seed": "node scripts/seed.js",
+    "set-admin": "node scripts/set-admin-claim.js",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:functions": "firebase deploy --only functions",
+    "deploy:rules": "firebase deploy --only firestore:rules,storage"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "firebase-admin": "^12.0.0",
+    "firebase-tools": "^13.0.0"
+  }
+}

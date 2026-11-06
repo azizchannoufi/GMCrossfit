@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>À propos | GMCrossfit</title>
+  <meta name="description" content="L'histoire et les valeurs de GMCrossfit — performance, qualité, style streetwear gym.">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('gmc_theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div data-site-banner hidden></div>
+  <app-header></app-header>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Brand</p>
+      <h1>À propos</h1>
+    </div>
+  </header>
+
+  <main class="container prose" style="padding-bottom: 3rem;">
+    <p class="hero__brand" style="font-size:clamp(2.5rem,8vw,4.5rem);">GMCrossfit</p>
+    <p>GMCrossfit est une marque de sportswear née dans la box. On conçoit des pièces qui encaissent les WODs — coupes agressives, matières techniques, identité streetwear-gym sans fioritures.</p>
+    <p>Chaque drop est pensé pour bouger : t-shirts, tanks, shorts, leggings, hoodies et accessoires. Pas de compromis entre performance et style.</p>
+    <h2>Nos engagements</h2>
+    <ul class="benefits">
+      <li>Qualité premium, testée en entraînement</li>
+      <li>Paiement à la livraison</li>
+      <li>Échanges simples en cas de mauvaise taille</li>
+      <li>Support WhatsApp réactif</li>
+    </ul>
+    <p style="margin-top:2rem;">
+      <a class="btn btn--accent" href="produits.html">Découvrir la boutique</a>
+    </p>
+  </main>
+
+  <app-footer></app-footer>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="banner.js"></script>
+</body>
+</html>

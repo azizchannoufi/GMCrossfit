@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Packs WOD | GMCrossfit</title>
+  <meta name="description" content="Packs CrossFit complets GMCrossfit — tenues coordonnées à prix avantageux.">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('gmc_theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div data-site-banner hidden></div>
+  <app-header></app-header>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Bundles</p>
+      <h1>Packs WOD</h1>
+      <p class="muted">Tenues complètes pour enchaîner les sessions.</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom: 3rem;">
+    <div class="product-grid" data-packs-grid></div>
+  </main>
+
+  <app-footer></app-footer>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="banner.js"></script>
+</body>
+</html>

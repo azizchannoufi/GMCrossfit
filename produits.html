@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boutique | GMCrossfit</title>
+  <meta name="description" content="Parcourez toute la collection GMCrossfit : t-shirts, débardeurs, shorts, leggings, hoodies et accessoires.">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('gmc_theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div data-site-banner hidden></div>
+  <app-header></app-header>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Collection</p>
+      <h1>Boutique</h1>
+      <p class="muted" data-products-count>Chargement…</p>
+    </div>
+  </header>
+
+  <main class="container catalog-layout" style="padding-bottom: 3rem;">
+    <form class="filters" data-filters>
+      <label>
+        Recherche
+        <input type="search" name="q" placeholder="T-shirt, hoodie…" autocomplete="off">
+      </label>
+      <label>
+        Catégorie
+        <select name="category">
+          <option value="">Toutes</option>
+        </select>
+      </label>
+      <label>
+        Genre
+        <select name="gender">
+          <option value="">Tous</option>
+          <option value="men">Homme</option>
+          <option value="women">Femme</option>
+          <option value="unisex">Unisexe</option>
+        </select>
+      </label>
+      <label>
+        Taille
+        <select name="size">
+          <option value="">Toutes</option>
+        </select>
+      </label>
+      <label>
+        Couleur
+        <select name="color">
+          <option value="">Toutes</option>
+        </select>
+      </label>
+      <fieldset style="border:none;padding:0;margin:0;">
+        <legend style="font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.35rem;">Prix (MAD)</legend>
+        <div class="price-range">
+          <input type="number" name="min" placeholder="Min" min="0">
+          <input type="number" name="max" placeholder="Max" min="0">
+        </div>
+      </fieldset>
+      <label>
+        Trier
+        <select name="sort">
+          <option value="newest">Nouveautés</option>
+          <option value="price-asc">Prix croissant</option>
+          <option value="price-desc">Prix décroissant</option>
+          <option value="name">Nom</option>
+        </select>
+      </label>
+      <button type="button" class="btn btn--ghost" data-filters-reset>Réinitialiser</button>
+    </form>
+
+    <div class="product-grid" data-products-grid></div>
+  </main>
+
+  <app-footer></app-footer>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="banner.js"></script>
+</body>
+</html>
